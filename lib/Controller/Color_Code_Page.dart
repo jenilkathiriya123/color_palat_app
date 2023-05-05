@@ -1,6 +1,7 @@
 import 'dart:math';
-import 'package:colour_palate/modal/colorCodce.dart';
 import 'package:get/get.dart';
+
+import '../Model/Color_Page.dart';
 
 class ColorController extends GetxController {
   Random random = Random();

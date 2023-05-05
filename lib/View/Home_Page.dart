@@ -1,8 +1,9 @@
-import 'package:colour_palate/controller/ColorInt.dart';
-import 'package:colour_palate/controller/theme,dart.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
+
+import '../Controller/Color_Code_Page.dart';
+import '../Controller/Theme_Page.dart';
 
 class home extends StatefulWidget {
   const home({Key? key}) : super(key: key);
@@ -27,7 +28,9 @@ class _homeState extends State<home> {
                 inactiveThumbColor: Colors.white,
                 value: themecontroller.dark,
                 onChanged: (val) {
-                  themecontroller.themeChange(val);
+                  setState(() {
+                    themecontroller.themeChange(val);
+                  });
                 });
           }),
         ],
@@ -37,27 +40,6 @@ class _homeState extends State<home> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                "Color Palette",
-                style: TextStyle(
-                  color: Colors.blue,
-                  fontSize: 10.w,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "Generator",
-                style: TextStyle(
-                  color: Colors.blue,
-                  fontSize: 10.w,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
             ],
           ),
           SizedBox(
